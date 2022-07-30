@@ -1,0 +1,176 @@
+header {
+  background-color: #aa0601;
+  .container {
+    @include pad {
+      padding: 0;
+    }
+  }
+  .navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include pad {
+      flex-direction: column;
+    }
+    h1 {
+      a {
+        background-image: url(../images/logo-white.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 48px;
+        display: block;
+        text-indent: 101%; /* 首行縮排 */
+        overflow: hidden; /* 自動隱藏超出的文字 */
+        white-space: nowrap; /* 強制不換行 */
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      column-gap: 64px; /* 網格間隙 */
+      margin-top: 25px;
+      margin-bottom: 25px;
+      @include pad {
+        width: 100%;
+        column-gap: 0;
+        margin: 0;
+      }
+      li {
+        @include pad {
+          width: 50%;
+        }
+        a {
+          display: block;
+          font-size: 20px;
+          text-align: center;
+          @include pad {
+            font-size: 16px;
+            border: 1px solid #fff;
+            padding: 12px 0;
+          }
+          &:hover {
+            background-color: #fff;
+            color: #aa0601;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #aa0601;
+  padding-top: 48px;
+  padding-bottom: 32px;
+  @include pad {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+
+    .footer-menu {
+      display: flex;
+      column-gap: 48px;
+      a {
+        display: block;
+        &:hover {
+          background-color: #fff;
+          color: #aa0601;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .footer-menu {
+        display: none;
+      }
+    }
+    .footer-platform {
+      display: flex;
+      column-gap: 32px;
+      @include desktops {
+        column-gap: 16px;
+      }
+      @include pad {
+        column-gap: 8px;
+      }
+      a {
+        img {
+          width: 48px;
+          height: 48px;
+          vertical-align: middle;
+          @include desktops {
+            width: 40px;
+            height: 40px;
+          }
+          @include pad {
+            width: 24px;
+            height: 24px;
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  .footer-contact {
+    padding-top: 24px;
+    padding-bottom: 32px;
+    @include pad {
+      padding-top: 0;
+      padding-bottom: 24px;
+    }
+    a {
+      font-size: 36px;
+      @include pad {
+        font-size: 16px;
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+      span {
+        font-size: 36px;
+        margin-right: 22px;
+        vertical-align: middle;
+        @include pad {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    border-top: 1px solid #ffffff;
+    @include pad {
+      display: block;
+      padding-top: 16px;
+    }
+    p {
+      color: #fff;
+    }
+    ul {
+      display: flex;
+      column-gap: 48px;
+      @include pad {
+        display: block;
+      }
+      li {
+        @include pad {
+          padding-top: 8px;
+        }
+        a {
+          font-size: 14px;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

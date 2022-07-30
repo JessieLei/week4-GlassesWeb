@@ -1,0 +1,53 @@
+@mixin desktops {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include desktops {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  @include pad {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
