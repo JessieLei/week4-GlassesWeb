@@ -22,7 +22,7 @@
     height: 100%;
     h1 {
       font-size: 36px;
-      color: #650300;
+      color: $primary-color-darken;
       @include pad {
         font-size: 24px;
       }
@@ -33,7 +33,7 @@
     h2 {
       font-size: 64px;
       font-weight: bold;
-      color: #650300;
+      color: $primary-color-darken;
       @include pad {
         font-size: 48px;
       }
@@ -46,7 +46,7 @@
       text-decoration: none;
       font-size: 20px;
       color: #fff;
-      background-color: #aa0601;
+      background-color: $primary-color;
       padding: 6px 12px;
       &:hover {
         opacity: 0.5;
@@ -56,16 +56,10 @@
 }
 
 .service {
-  background-color: #fbf2f2;
-  padding: 80px 0;
+  background-color: $bg-color;
+  @include index-section-padding;
   h2 {
-    font-size: 48px;
-    font-weight: bold;
-    color: #650300;
-    text-align: center;
-    @include mobile {
-      font-size: 24px;
-    }
+    @include index-h2;
   }
   ul {
     display: flex;
@@ -86,13 +80,208 @@
         height: 100px;
       }
       h3 {
-        color: #650300;
+        color: $primary-color-darken;
         font-size: 24px;
         font-weight: bold;
       }
       p {
         text-align-last: left;
       }
+    }
+  }
+}
+
+.classic {
+  @include index-section-padding;
+  h2 {
+    @include index-h2;
+    margin-bottom: 48px;
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 24px;
+  }
+  li {
+    text-align: center;
+    width: calc(33% - 72px / 3);
+    @include desktops {
+      width: 100%;
+    }
+  }
+  img {
+    @include desktops {
+      width: 336px;
+      height: 336px;
+    }
+    @include pad {
+      max-width: 100%;
+    }
+  }
+  h4 {
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    color: $primary-color;
+  }
+}
+
+.co-branding {
+  background-image: url(../images/index-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include index-section-padding;
+  @include desktops {
+    background-image: url(../images/index-bg-md.png);
+  }
+  @include mobile {
+    background-image: url(../images/index-bg-sm.png);
+  }
+  h2 {
+    @include index-h2;
+    margin-bottom: 48px;
+    color: #fff;
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+  }
+  li {
+    text-align: center;
+    width: 50%;
+    @include desktops {
+      width: 100%;
+    }
+  }
+  .double-a {
+    background-image: url(../images/home-section4-1.png);
+    background-position: center;
+    background-size: cover;
+    height: 240px;
+    @include mobile {
+      background-image: url(../images/home-section4-1-sm.png);
+    }
+  }
+  .youth {
+    background-image: url(../images/home-section4-2.png);
+    background-position: center;
+    background-size: cover;
+    height: 240px;
+    @include mobile {
+      background-image: url(../images/home-section4-2-sm.png);
+    }
+  }
+  img {
+    display: block;
+  }
+  h4 {
+    @include index-h4;
+    padding: 8px auto;
+    background-color: #fff;
+  }
+}
+
+.customer {
+  @include index-section-padding;
+  h2 {
+    @include index-h2;
+    margin-bottom: 48px;
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    @include pad {
+      row-gap: 16px;
+    }
+  }
+  li {
+    width: calc(25% - 96px / 4);
+    box-shadow: 0px 2px 6px #00000029;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    @include pad {
+      width: calc(50% - 96px / 4);
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+  .customer-txt {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: 205px;
+  }
+  span {
+    font-size: 14px;
+    color: #707070;
+    margin-top: auto;
+  }
+}
+
+.contact {
+  @include index-section-padding;
+  background-color: $bg-color;
+}
+.contact-width {
+  max-width: 650px;
+  margin: 0 auto;
+  @include pad {
+    max-width: 580px;
+  }
+  @include mobile {
+    max-width: 100%;
+  }
+  h2 {
+    @include index-h2;
+  }
+  p {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    font-size: 20px;
+    @include pad {
+      margin: 24px 0;
+      font-size: 16px;
+    }
+  }
+  .lable {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .checkbox {
+    display: flex;
+  }
+  button {
+    display: block;
+    width: 416px;
+    margin: 48px auto 0;
+    color: #fff;
+    background-color: $primary-color;
+    padding: 16px;
+    font-size: 16px;
+    font-family: "Noto Sans TC", sans-serif;
+    border: none;
+    @include mobile {
+      margin: 24px auto 0;
+      width: 100%;
+    }
+    &:hover {
+      background-color: $primary-color-darken;
+      cursor: pointer;
     }
   }
 }

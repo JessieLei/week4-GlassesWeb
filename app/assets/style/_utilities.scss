@@ -26,13 +26,23 @@
 .mb-12 {
   margin-bottom: 12px;
 }
-
+.mb-16 {
+  margin-bottom: 16px;
+}
 .mb-25 {
   margin-bottom: 25px;
 }
 
 .mb-32 {
   margin-bottom: 32px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mr-4 {
+  margin-right: 4px;
 }
 
 .pt-24 {
@@ -43,20 +53,24 @@
   padding-bottom: 32px;
 }
 
-/* 消除重複border */
-
-.margin-minus-top {
-  margin-top: -1px;
+.py-6 {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
-.margin-minus-right {
-  margin-right: -1px;
+.pl-12 {
+  padding-left: 12px;
 }
 
-.margin-minus-bottom {
-  margin-bottom: -1px;
+.fw-bold {
+  font-weight: bold;
 }
 
-.margin-minus-left {
-  margin-left: -1px;
+.w-full {
+  width: 100%;
+}
+
+.checkbox-size {
+  width: 20px;
+  height: 20px;
 }
