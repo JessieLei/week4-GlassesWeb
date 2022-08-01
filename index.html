@@ -21,13 +21,18 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@0,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/b0cef0236c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <header>
       <div class="navBar container">
+        <a href="#" class="ham-icon"><i class="fa-solid fa-bars"></i></a>
         <h1><a class="mt-12 mb-12" href="index.html">LOGO</a></h1>
-        <ul>
+        <ul class="dropdown">
           <li>
             <a class="margin-minus-right margin-minus-bottom" href="#"
               >系列鏡框</a
@@ -89,6 +94,143 @@
       </ul>
     </div>
   </section>
+  <section class="classic">
+    <div class="container">
+      <h2>經典系列鏡框</h2>
+      <ul>
+        <li>
+          <img src="./assets/images/home-section3-1.png" alt="OPTICAL" />
+          <h4>OPTICAL</h4>
+        </li>
+        <li>
+          <img src="./assets/images/home-section3-2.png" alt="SUNGLASSES" />
+          <h4>SUNGLASSES</h4>
+        </li>
+        <li>
+          <img src="./assets/images/home-section3-3.png" alt="FUNCTIONA" />
+          <h4>FUNCTIONAL</h4>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="co-branding">
+    <div class="container">
+      <h2>聯名設計鏡框</h2>
+      <ul>
+        <li>
+          <div class="double-a"></div>
+          <h4>DOUBLE A+</h4>
+        </li>
+        <li>
+          <div class="youth"></div>
+          <h4>YOUTH</h4>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="customer">
+    <div class="container">
+      <h2>顧客推薦</h2>
+      <ul>
+        <li>
+          <img src="./assets/images/home-section5-1.png" alt="customer_1" />
+          <div class="customer-txt">
+            <p class="fw-bold">Jessy</p>
+            <p class="mt-8">眼鏡品質優良，下次還會想來這邊購買！</p>
+            <span>2021/06/20</span>
+          </div>
+        </li>
+        <li>
+          <img src="./assets/images/home-section5-2.png" alt="customer_2" />
+          <div class="customer-txt">
+            <p class="fw-bold">凱倫</p>
+            <p class="mt-8">
+              做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！
+            </p>
+            <span>2021/04/18</span>
+          </div>
+        </li>
+        <li>
+          <img src="./assets/images/home-section5-3.png" alt="customer_3" />
+          <div class="customer-txt">
+            <p class="fw-bold">悠悠</p>
+            <p class="mt-8">
+              謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！
+            </p>
+            <span>2020/12/25</span>
+          </div>
+        </li>
+        <li>
+          <img src="./assets/images/home-section5-4.png" alt="customer_4" />
+          <div class="customer-txt">
+            <p class="fw-bold">Kyuan</p>
+            <p class="mt-8">服務很好，品質沒有任何問題，非常喜歡。</p>
+            <span>2020/10/31</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="contact-width container">
+      <h2>聯絡我們</h2>
+      <p>
+        我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。
+      </p>
+      <!-- 表單 -->
+      <form>
+        <lable class="lable" for="name">姓名</lable>
+        <input
+          class="w-full py-6 pl-12 mb-16"
+          id="name"
+          name="name"
+          type="text"
+          placeholder="陳小明"
+        />
+
+        <lable class="lable" for="tel">聯絡電話</lable>
+        <input
+          class="w-full py-6 pl-12 mb-16"
+          id="tel"
+          name="tel"
+          type="tel"
+          placeholder="0912-345-678"
+        />
+
+        <lable class="lable" for="email">電子郵件</lable>
+        <input
+          class="w-full py-6 pl-12 mb-16"
+          id="email"
+          name="email"
+          type="email"
+          placeholder="example@email.com"
+        />
+
+        <lable class="lable" for="opinion">意見反應</lable>
+        <textarea
+          class="w-full py-6 pl-12 mb-16"
+          id="opinion"
+          name="opinion"
+          rows="6"
+          cols="40"
+          placeholder="請輸入您的意見"
+        ></textarea>
+        <div class="checkbox">
+          <input
+            class="checkbox-size mr-4"
+            type="checkbox"
+            id="privacy"
+            name="privacy"
+            value="agree"
+          />
+          <label for="privacy">
+            我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label
+          >
+        </div>
+        <button type="submit">確認送出</button>
+      </form>
+    </div>
+  </section>
 </main>
 
 
@@ -146,6 +288,7 @@
         </div>
       </div>
     </footer>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
