@@ -1,0 +1,183 @@
+.sunglasses-banner {
+  .container {
+    @include desktops {
+      padding: 0;
+    }
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    width: 33.3333%;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    &:hover {
+      background-color: #dcdcdc;
+    }
+  }
+  a {
+    display: block;
+    color: #000;
+    font-size: 32px;
+    padding: 24px 0 16px;
+    text-align: center;
+    font-weight: 700;
+    @include pad {
+      font-size: 24px;
+      padding: 16px 0 8px;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
+
+.this-page-active {
+  padding: 24px 0 16px;
+  border-bottom: 8px solid $primary-color;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  .product-header-img-left {
+    width: 50%;
+    border: none;
+    @include pad {
+      background-image: url(../images/product-header-sm-3.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 296px;
+    }
+    @include mobile {
+      height: 136px;
+    }
+  }
+  .product-header-img-right {
+    width: 50%;
+    border: none;
+    @include pad {
+      background-image: url(../images/product-header-sm-4.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 296px;
+    }
+    @include mobile {
+      height: 136px;
+    }
+  }
+  img {
+    display: block;
+    @include pad {
+      display: none;
+    }
+  }
+}
+
+.sunglasses-product-list {
+  padding: 80px 0;
+  @include mobile {
+    padding: 40px 0 64px 0;
+  }
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 32px;
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  .roboto {
+    font-family: "Roboto", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+}
+
+.sunglasses-product-list {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 24px;
+    row-gap: 80px;
+    @include pad {
+      row-gap: 40px;
+    }
+    a {
+      display: block;
+    }
+    li {
+      width: 31%;
+      @include pad {
+        width: 47%;
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  .sunglasses {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    .product-price {
+      font-weight: 700;
+      color: $primary-color;
+    }
+  }
+  .product-color {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 0;
+    li {
+      width: auto;
+    }
+    .color-1 {
+      @include sunglasses-color;
+      background-color: #5f3e2d;
+      margin-right: 8px;
+    }
+  }
+  .color-2 {
+    @include sunglasses-color;
+    background-color: #b75929;
+  }
+}
+
+.change-page {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  @include mobile {
+    margin-bottom: 64px;
+  }
+  li {
+    border: 1px solid #555555;
+    border-right: none;
+  }
+  li:last-child {
+    border-right: 1px solid #555555;
+  }
+  a {
+    display: block;
+    color: #000;
+    font-size: 18px;
+    padding: 12px 16px;
+    @include mobile {
+      font-size: 16px;
+      padding: 12px 14px;
+    }
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}

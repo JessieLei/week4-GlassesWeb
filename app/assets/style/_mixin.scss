@@ -40,3 +40,10 @@
     padding: 40px 0;
   }
 }
+
+@mixin sunglasses-color {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+}
